@@ -1,0 +1,80 @@
+
+Showing logs for build [32msonyali01-environment-leaderbro-5sw25-1[0m stage [32mmeta-pipeline[0m and container [32mstep-credential-initializer-k65t7[0m
+{"level":"warn","ts":1568762929.390152,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568762929.3906255,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32msonyali01-environment-leaderbro-5sw25-1[0m stage [32mmeta-pipeline[0m and container [32mstep-working-dir-initializer-pjw9b[0m
+{"level":"warn","ts":1568762930.2058456,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1568762930.2074325,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32msonyali01-environment-leaderbro-5sw25-1[0m stage [32mmeta-pipeline[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32msonyali01-environment-leaderbro-5sw25-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-sonyali01-environment-lead-nn6wn[0m
+{"level":"warn","ts":1568762935.2740805,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568762935.64627,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/*********/environment-leaderbronze-production.git @ 556a3ac8bed065ededd19da0b2ab85d308ce2cd3 in path /workspace/source"}
+
+Showing logs for build [32msonyali01-environment-leaderbro-5sw25-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:556a3ac8bed065ededd19da0b2ab85d308ce2cd3,1:370f583157f80bd59bc14453521a0abb2d77f3f2
+DEBUG: ran git fetch --unshallow origin 370f583157f80bd59bc14453521a0abb2d77f3f2: 556a3ac8bed065ededd19da0b2ab85d308ce2cd3: in 
+DEBUG: ran git checkout master in 
+DEBUG: ran git reset --hard 556a3ac8bed065ededd19da0b2ab85d308ce2cd3 in 
+DEBUG: ran clean --force -d . in 
+DEBUG: ran git merge 370f583157f80bd59bc14453521a0abb2d77f3f2 in 
+Merged SHA 370f583157f80bd59bc14453521a0abb2d77f3f2 with commit message 'chore: Promote tekton-go-091702 to version 0.0.1' into base branch master
+
+Showing logs for build [32msonyali01-environment-leaderbro-5sw25-1[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+DEBUG: ran git fetch origin 370f583157f80bd59bc14453521a0abb2d77f3f2: 556a3ac8bed065ededd19da0b2ab85d308ce2cd3: in 
+DEBUG: Unshallowed git repo in 
+DEBUG: ran git checkout master in 
+DEBUG: ran git reset --hard 556a3ac8bed065ededd19da0b2ab85d308ce2cd3 in 
+DEBUG: ran clean --force -d . in 
+DEBUG: ran git merge 370f583157f80bd59bc14453521a0abb2d77f3f2 in 
+Merged SHA 370f583157f80bd59bc14453521a0abb2d77f3f2 with commit message 'chore: Promote tekton-go-091702 to version 0.0.1' into base branch master
+
+Showing logs for build [32msonyali01-environment-leaderbro-5sw25-1[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+Deleting and cloning the Jenkins X versions repo
+Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions
+selected pack: /builder/home/.**/draft/packs/github.com/jenkins-x-buildpacks/jenkins-x-kubernetes/packs/environment
+Effective pipeline written to jenkins-x-promotion-build-effective.yml
+
+Showing logs for build [32msonyali01-environment-leaderbro-5sw25-1[0m stage [32mmeta-pipeline[0m and container [32mstep-create-tekton-crds[0m
+PipelineActivity for *********-environment-leaderbronze-production-PR-1-1
+Applying changes 
+upserted PipelineResource *********-environment-leaderbro for the git repository https://github.com/*********/environment-leaderbronze-production.git
+upserted Task *********-environment-leaderbro-5sw25-from-build-pack-1
+upserted Pipeline *********-environment-leaderbro-5sw25-1
+created PipelineRun *********-environment-leaderbro-5sw25-1
+created PipelineStructure *********-environment-leaderbro-5sw25-1
+
+Showing logs for build [32msonyali01-environment-leaderbro-5sw25-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-k9t48[0m
+{"level":"warn","ts":1568762943.4554353,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568762943.455831,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32msonyali01-environment-leaderbro-5sw25-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-klb7z[0m
+{"level":"warn","ts":1568762944.5387223,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1568762944.539849,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source /workspace/source/env\""}
+
+Showing logs for build [32msonyali01-environment-leaderbro-5sw25-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32msonyali01-environment-leaderbro-5sw25-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-sonyali01-environment-leaderbro-rmrh7[0m
+{"level":"warn","ts":1568762950.5789185,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568762950.9206662,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/*********/environment-leaderbronze-production.git @ master in path /workspace/source"}
+
+Showing logs for build [32msonyali01-environment-leaderbro-5sw25-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:556a3ac8bed065ededd19da0b2ab85d308ce2cd3,1:370f583157f80bd59bc14453521a0abb2d77f3f2
+DEBUG: ran git fetch --unshallow origin 370f583157f80bd59bc14453521a0abb2d77f3f2: 556a3ac8bed065ededd19da0b2ab85d308ce2cd3: in 
+DEBUG: ran git checkout master in 
+DEBUG: ran git reset --hard 556a3ac8bed065ededd19da0b2ab85d308ce2cd3 in 
+DEBUG: ran clean --force -d . in 
+DEBUG: ran git merge 370f583157f80bd59bc14453521a0abb2d77f3f2 in 
+Merged SHA 370f583157f80bd59bc14453521a0abb2d77f3f2 with commit message 'chore: Promote tekton-go-091702 to version 0.0.1' into base branch master
+
+Showing logs for build [32msonyali01-environment-leaderbro-5sw25-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-build[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
